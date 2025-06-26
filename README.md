@@ -59,27 +59,6 @@ npm start        # Starter boten
   * 🇬🇧 English
   * 🇳🇴 Norsk
 
-## 📁 Struktur
-
-```
-Discord-Gambling-Machine/
-├── index.js
-├── config.js
-├── deploy-commands.js
-├── coins.json
-├── daily.json
-├── userlang.json
-├── lang/
-│   ├── en.json
-│   └── no.json
-├── logs/
-├── utils/
-│   ├── coins.js
-│   ├── daily.js
-│   ├── logger.js
-│   └── lang.js
-```
-
 ## 📄 Lisens
 
 Dette prosjektet er lisensiert under [MIT License](LICENSE).
