@@ -10,8 +10,6 @@ En komplett Discord-bot laget for virtuelle casinospill med støtte for:
 - 📜 Logging per bruker
 - 🌐 Multispråk (norsk + engelsk)
 
----
-
 ## 🛠 Installasjon
 
 ```bash
@@ -31,16 +29,12 @@ module.exports = {
 };
 ```
 
----
-
-## 🚀 Start boten
+## 🚀 Kommandoer
 
 ```bash
-node deploy-commands.js  # Kjør én gang for å registrere slash-kommandoer
-node index.js
+npm run deploy   # Kjør én gang for å registrere slash-kommandoer
+npm start        # Starter boten
 ```
-
----
 
 ## 📋 Funksjoner
 
@@ -65,12 +59,10 @@ node index.js
   * 🇬🇧 English
   * 🇳🇴 Norsk
 
----
-
 ## 📁 Struktur
 
 ```
-gambling-bot/
+Discord-Gambling-Machine/
 ├── index.js
 ├── config.js
 ├── deploy-commands.js
@@ -87,8 +79,6 @@ gambling-bot/
 │   ├── logger.js
 │   └── lang.js
 ```
-
----
 
 ## 📄 Lisens
 
