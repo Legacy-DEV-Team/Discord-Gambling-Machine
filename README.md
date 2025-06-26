@@ -1,16 +1,18 @@
-## 🎰 Gambling Bot for Discord
+## 🎰 Discord Gambling Machine
 
-En komplett Discord-bot laget for virtuelle casinospill med støtte for:
+A complete Discord bot for virtual casino games featuring:
 - 🎰 Slot Machine
-- 🃏 Blackjack (med Hit/Stand)
-- 🎡 Roulette (med fargevalg)
-- 💰 Virtuelle mynter
-- 🎁 Daglig bonus med streak
-- 🏆 Leaderboard for rikeste brukere
-- 📜 Logging per bruker
-- 🌐 Multispråk (norsk + engelsk)
+- 🃏 Blackjack (with Hit/Stand)
+- 🎡 Roulette (with color choice)
+- 💰 Virtual currency stored per user
+- 🎁 Daily bonus with streak system
+- 🏆 Leaderboard for top richest users
+- 📜 Per-user activity logging
+- 🌐 Multilingual support (English + Norwegian)
 
-## 🛠 Installasjon
+---
+
+## 🛠 Installation
 
 ```bash
 git clone https://github.com/Legacy-DEV-Team/Discord-Gambling-Machine.git
@@ -18,7 +20,7 @@ cd Discord-Gambling-Machine
 npm install
 ````
 
-Rediger `config.js`:
+Edit `config.js` with your bot details:
 
 ```js
 module.exports = {
@@ -29,36 +31,42 @@ module.exports = {
 };
 ```
 
-## 🚀 Kommandoer
+---
+
+## 🚀 Commands
 
 ```bash
-npm run deploy   # Kjør én gang for å registrere slash-kommandoer
-npm start        # Starter boten
+npm run deploy   # Run once to register slash commands
+npm start        # Launch the bot
 ```
 
-## 📋 Funksjoner
+---
 
-### Spill
+## 🎮 Features
 
-* **/setup**: Starter spillpanelet
-* **🎰 Slot Machine**: Velg innsats og snurr
-* **🃏 Blackjack**: Spill mot dealer med Hit/Stand
-* **🎡 Roulette**: Velg farge og sats
+### Games
 
-### Økonomi
+* **/setup**: Opens the main game panel
+* **🎰 Slot Machine**: Pick a wager and spin
+* **🃏 Blackjack**: Play against dealer using Hit or Stand
+* **🎡 Roulette**: Choose color and bet
 
-* 💰 `/givecoins` av eier
-* 🎁 Daglig bonus med økende streak
-* 🏆 Leaderboard for topp brukere
-* 📜 Logger alle gevinster/tap
+### Economy
 
-### Språk
+* 💰 `/givecoins` (owner only)
+* 🎁 Daily bonus increases with streak
+* 🏆 Leaderboard shows top 10 richest users
+* 📜 Logging of all transactions and results
 
-* `/setlang` med støtte for:
+### Language
+
+* `/setlang` to select language:
 
   * 🇬🇧 English
   * 🇳🇴 Norsk
 
-## 📄 Lisens
+---
 
-Dette prosjektet er lisensiert under [MIT License](LICENSE).
+## 📄 License
+
+This project is licensed under the [MIT License](LICENSE) – free to use and modify.
