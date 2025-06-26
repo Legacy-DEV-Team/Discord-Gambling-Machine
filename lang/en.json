@@ -1,0 +1,9 @@
+{
+  "balance": "💰 You have {amount} coins.",
+  "not_enough": "❌ Not enough coins.",
+  "daily_claimed": "❌ You already claimed your daily bonus. Try again tomorrow.",
+  "daily_bonus": "🎁 You claimed your daily bonus: **{amount} coins** (Streak: {streak} days)",
+  "leaderboard_title": "🏆 Top 10 Richest Users",
+  "slot_win": "🎉 You won {amount} coins!",
+  "slot_loss": "😢 You lost {amount} coins."
+}

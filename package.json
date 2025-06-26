@@ -1,0 +1,15 @@
+{
+  "name": "gambling-bot",
+  "version": "1.0.0",
+  "description": "A Discord gambling bot with slots, blackjack, roulette, and virtual currency",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "deploy": "node deploy-commands.js"
+  },
+  "author": "Legacy DEV Team",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^14.14.1"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "balance": "💰 Du har {amount} mynter.",
+  "not_enough": "❌ Du har ikke nok mynter.",
+  "daily_claimed": "❌ Du har allerede hentet dagens bonus. Prøv igjen i morgen.",
+  "daily_bonus": "🎁 Du fikk dagens bonus: **{amount} mynter** (Streak: {streak} dager)",
+  "leaderboard_title": "🏆 Topp 10 rikeste brukere",
+  "slot_win": "🎉 Du vant {amount} mynter!",
+  "slot_loss": "😢 Du tapte {amount} mynter."
+}
