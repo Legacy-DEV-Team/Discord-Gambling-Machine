@@ -1,40 +1,31 @@
-const { REST, Routes, SlashCommandBuilder } = require('discord.js');
+const fs = require('fs');
+const path = require('path');
+const { REST, Routes } = require('discord.js');
 const { token, clientId } = require('./config');
 
-const commands = [
-  new SlashCommandBuilder()
-    .setName('setup')
-    .setDescription('Setup the casino panel (Owner only)'),
-  new SlashCommandBuilder()
-    .setName('givecoins')
-    .setDescription('Give coins to a user (Owner only)')
-    .addUserOption(opt =>
-      opt.setName('user')
-        .setDescription('Target user')
-        .setRequired(true))
-    .addIntegerOption(opt =>
-      opt.setName('amount')
-        .setDescription('Amount')
-        .setRequired(true)),
-  new SlashCommandBuilder()
-    .setName('setlang')
-    .setDescription('Set your preferred language')
-    .addStringOption(opt =>
-      opt.setName('lang')
-        .setDescription('Choose language')
-        .addChoices(
-          { name: 'English', value: 'en' },
-          { name: 'Norsk', value: 'no' }
-        )
-        .setRequired(true))
-].map(cmd => cmd.toJSON());
+const commands = [];
+const commandsPath = path.join(__dirname, 'commands');
+const commandFiles = fs.readdirSync(commandsPath).filter(file => file.endsWith('.js'));
 
-const rest = new REST({ version: '10' }).setToken(token);
+for (const file of commandFiles) {
+  const filePath = path.join(commandsPath, file);
+  const command = require(filePath);
+  if ('data' in command && 'execute' in command) {
+    commands.push(command.data.toJSON());
+  }
+}
+
+const rest = new REST().setToken(token);
 
 (async () => {
-  await rest.put(
-    Routes.applicationCommands(clientId),
-    { body: commands }
-  );
-  console.log('✅ Slash commands deployed!');
+  try {
+    console.log(`🔁 Refreshing ${commands.length} application (/) commands...`);
+    await rest.put(
+      Routes.applicationCommands(clientId),
+      { body: commands }
+    );
+    console.log('✅ Slash commands deployed!');
+  } catch (error) {
+    console.error('❌ Error while deploying commands:', error);
+  }
 })();
